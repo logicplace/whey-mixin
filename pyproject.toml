@@ -1,11 +1,12 @@
 [project]
 name = "whey-mixin"
-version = "0.1.0"
+version = "0.1.1"
 description = "A simple builder hooks system for the Whey build system"
 readme = "README.md"
+license = {file = "LICENSE"}
 keywords = ["whey"]
 dependencies = ["whey"]
-dynamic = ["classifiers", "license", "requires-python"]
+dynamic = ["classifiers", "requires-python"]
 
 [[project.authors]]
 name = "Sapphire Becker"

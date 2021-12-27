@@ -1,4 +1,4 @@
-from functools import cache
+from functools import lru_cache
 from typing import Type
 
 import dom_toml
@@ -15,7 +15,7 @@ default_class = {
 	"binary": builder.WheelBuilder,
 }
 
-@cache
+@lru_cache(1)
 def get_base_config():
 	config = dom_toml.load("pyproject.toml", decoder=dom_toml.decoder.TomlPureDecoder)
 	return config.get("tool", {}).get("whey", {}).get("mixin", {})
