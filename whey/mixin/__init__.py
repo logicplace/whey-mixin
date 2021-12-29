@@ -1,3 +1,5 @@
+import os
+import sys
 from functools import lru_cache
 from typing import Type
 
@@ -8,6 +10,8 @@ from whey.config.whey import get_entry_points
 
 from .paths import PathPlusPlus
 
+
+sys.path.append(os.getcwd())
 
 default_class = {
 	"sdist": builder.SDistBuilder,
