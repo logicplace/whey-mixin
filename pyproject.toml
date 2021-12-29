@@ -1,6 +1,6 @@
 [project]
 name = "whey-mixin"
-version = "0.1.2"
+version = "0.1.3"
 description = "A simple builder hooks system for the Whey build system"
 readme = "README.md"
 license = {file = "LICENSE"}

@@ -9,7 +9,7 @@ class PathPlusPlus(PathPlus):
 	def __new__(cls: Type[_PPP], *args, **kwargs) -> _PPP:
 		if cls is PathPlusPlus:
 			cls = WindowsPathPlusPlus if os.name == "nt" else PosixPathPlusPlus
-		return super().__new__(*args, **kwargs)
+		return PathPlus.__new__(cls, *args, **kwargs)
 
 	def is_newer_than(self, other: PathPlus):
 		return self.stat().st_mtime > other.stat().st_mtime
